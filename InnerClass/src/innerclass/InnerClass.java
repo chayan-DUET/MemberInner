@@ -9,26 +9,36 @@ package innerclass;
  * @author Chayan_pc
  */
 public class InnerClass {
-   static  int x;
+   static  int man;
+   static  int man1;
+     static  int man2;
+     static int total;
     public static  int Mat_inner()
     {
      
       class inner {
-            int y;
-            int z;
-            int r;
+            int hand1;
+            int hand2;
+            int act;
+
+            public inner(int yy,int zz) {
+                hand1=yy;
+                hand2=zz;
+                act=hand1+hand2;
+            }
+            
            
         
         }
-      inner in =new inner();
-      in.y=100;
-      in.z=100;
-      in.r=in.y+in.z;
+      inner in =new inner(20,25);
+      ///in.y=100;
+     // in.z=100;
+      //in.r=in.y+in.z;
       
       
       
         
-        return in.r;
+        return in.act;
     }
 
     /**
@@ -39,5 +49,12 @@ public class InnerClass {
         System.out.println(Mat_inner());  
         // InnerClass c=new InnerClass();       or
        // System.out.println( c.Mat_inner());;
+        InnerClass inc=new InnerClass();
+        inc.man=inc.Mat_inner();
+        inc.man1=1;
+        inc.man2=2;
+        inc.total=inc.man+inc.man1+inc.man2;
+        System.out.println("Total man="+inc.total);
+        
     }
 }
